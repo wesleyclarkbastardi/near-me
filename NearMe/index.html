@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>NearMe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore places near you">
+    <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/leaflet.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">    
+    <script src="js/vendor/angular.min.js" defer></script>    
+    <script src ="js/vendor/leaflet.js" defer></script>
+    <script src="js/vendor/angular-leaflet-directive.min.js" defer></script>    
+    <script src="js/vendor/helpers.js" defer></script>
+    <script src="js/vendor/angular-route.min.js" defer></script>
+        
+  </head>
+  <body ng-app="NearMeApp">    
+    <div class="header">
+      <div class="container-fluid">
+        <h1 class="pull-left">NearMe</h1>        
+        <a class="pull-right" href="#!/about">About</a>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary" id="coordinate-button">Get your coordinates</button>
+        </div>    
+      </div>        
+    </div>
+        
+    <div ng-view></div>
+
+    <!-- Modules -->
+    <script src="js/app.js" defer></script>
+    
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js" defer></script>
+    <script src="js/controllers/AboutController.js" defer></script>    
+    
+  </body>
+</html>
